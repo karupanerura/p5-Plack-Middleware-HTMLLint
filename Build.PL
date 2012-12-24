@@ -31,6 +31,14 @@ my $builder = Module::Build::Pluggable->new(
         'Plack::Util::Accessor' => 0,
         'HTML::Escape'          => 0,
     },
+    auto_features => {
+        'HTML::Lint::Pluggable' => {
+            description => "use HTML::Lint::Pluggable",
+            requires => {
+                'HTML::Lint::Pluggable' => 0,
+            },
+        },
+    },
     no_index    => { 'directory' => [ 'inc' ] },
     name        => 'Plack-Middleware-HTMLLint',
     module_name => 'Plack::Middleware::HTMLLint',
