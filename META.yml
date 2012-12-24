@@ -30,6 +30,9 @@ provides:
   Plack::Middleware::HTMLLint:
     file: lib/Plack/Middleware/HTMLLint.pm
     version: 0.01
+  Plack::Middleware::HTMLLint::Pluggable:
+    file: lib/Plack/Middleware/HTMLLint/Pluggable.pm
+    version: 0.01
 requires:
   HTML::Escape: 0
   HTML::Lint: 0
