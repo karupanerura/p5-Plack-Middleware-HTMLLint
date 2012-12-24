@@ -152,7 +152,15 @@ This document describes Plack::Middleware::HTMLLint version 0.01.
 
     builder {
         enable_if { $ENV{PLACK_ENV} eq 'development' } 'HTMLLint';
-        $app;
+        sub {
+            my $env = shift;
+            # ...
+            return [
+                200,
+                ['Content-Type' => 'text/plain'],
+                ['<html><head>...']
+            ];
+        };
     };
 
 =head1 DESCRIPTION

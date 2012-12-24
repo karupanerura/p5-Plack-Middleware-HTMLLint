@@ -1,39 +1,49 @@
-This is Perl module Plack::Middleware::HTMLLint.
+NAME
+    Plack::Middleware::HTMLLint - check syntax with HTML::Lint for PSGI
+    application's response HTML
 
-INSTALLATION
+VERSION
+    This document describes Plack::Middleware::HTMLLint version 0.01.
 
-Type the following command:
+SYNOPSIS
+        use Plack::Builder;
 
-    $ curl -L http://cpanmin.us | perl - Plack::Middleware::HTMLLint
+        builder {
+            enable_if { $ENV{PLACK_ENV} eq 'development' } 'HTMLLint';
+            sub {
+                my $env = shift;
+                # ...
+                return [
+                    200,
+                    ['Content-Type' => 'text/plain'],
+                    ['<html><head>...']
+                ];
+            };
+        };
 
-Or install cpanm and then run the following command to install
-Plack::Middleware::HTMLLint:
+DESCRIPTION
+    This module check syntax with HTML::Lint for PSGI application's response
+    HTML. to assist you to discover the HTML syntax errors during the
+    development of Web applications.
 
-    $ cpanm Plack::Middleware::HTMLLint
+DEPENDENCIES
+    Perl 5.8.1 or later.
 
-If you get an archive of this distribution, unpack it and build it
-as per the usual:
+BUGS
+    All complex software has bugs lurking in it, and this module is no
+    exception. If you find a bug please either email me, or add the bug to
+    cpan-RT.
 
-    $ tar xzf Plack-Middleware-HTMLLint-$version.tar.gz
-    $ cd Plack-Middleware-HTMLLint-$version
-    $ perl Makefile.PL
-    $ make && make test
+SEE ALSO
+    Plack::Middleware Plack::Middleware::HTMLLint::Pluggable HTML::Lint
+    HTML::Lint::Pluggable
 
-Then install it:
-
-    $ make install
-
-DOCUMENTATION
-
-Plack::Middleware::HTMLLint documentation is available as in POD. So you can do:
-
-    $ perldoc Plack::Middleware::HTMLLint
-
-to read the documentation online with your favorite pager.
+AUTHOR
+    Kenta Sato <karupa@cpan.org>
 
 LICENSE AND COPYRIGHT
+    Copyright (c) 2012, Kenta Sato. All rights reserved.
 
-Copyright (c) 2012, Kenta Sato. All rights reserved.
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.

@@ -1,9 +1,9 @@
 use strict;
-use warnings;
+use warnings FATAL => 'all';
 
 use Module::Build::Pluggable (
     'Repository',
-    'ReadmeMarkdownFromPod',
+    (-d '.git' || $ENV{RELEASE_TESTING}) ? 'ReadmeMarkdownFromPod' : (),
 );
 
 my $builder = Module::Build::Pluggable->new(
@@ -17,6 +17,7 @@ my $builder = Module::Build::Pluggable->new(
         'HTTP::Request'  => 0,
     },
     configure_requires   => {
+        'Module::Build'                                   => '0.40',
         'Module::Build::Pluggable'                        => '0.04',
         'Module::Build::Pluggable::ReadmeMarkdownFromPod' => '0.02',
     },
@@ -38,4 +39,5 @@ my $builder = Module::Build::Pluggable->new(
     create_readme  => 1,
     create_license => 1,
 );
+
 $builder->create_build_script();
