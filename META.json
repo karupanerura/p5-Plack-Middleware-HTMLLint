@@ -26,14 +26,9 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "HTTP::Request" : "0",
             "Module::Build::Pluggable::ReadmeMarkdownFromPod" : "0.04",
             "Module::Build::Pluggable::Repository" : "0.01",
-            "Plack::Builder" : "0",
-            "Plack::Test" : "0",
-            "Pod::Markdown" : "0",
-            "Test::More" : "0.88",
-            "Test::Requires" : "0.06"
+            "Pod::Markdown" : "0"
          }
       },
       "configure" : {
@@ -42,7 +37,7 @@
             "CPAN::Meta::Prereqs" : "0",
             "Module::Build" : "0.38",
             "Module::Build::Pluggable" : "0.04",
-            "Module::Build::Pluggable::ReadmeMarkdownFromPod" : "0.02",
+            "Module::Build::Pluggable::ReadmeMarkdownFromPod" : "0.04",
             "Module::Build::Pluggable::Repository" : "0.01"
          }
       },
@@ -65,6 +60,15 @@
             "constant" : "0",
             "parent" : "0",
             "perl" : "5.009_004"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "HTTP::Request" : "0",
+            "Plack::Builder" : "0",
+            "Plack::Test" : "0",
+            "Test::More" : "0.88",
+            "Test::Requires" : "0.06"
          }
       }
    },
