@@ -3,7 +3,7 @@ use 5.008_001;
 use strict;
 use warnings;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use parent qw/ Plack::Middleware /;
 
@@ -144,7 +144,7 @@ Plack::Middleware::HTMLLint - check syntax with HTML::Lint for PSGI application'
 
 =head1 VERSION
 
-This document describes Plack::Middleware::HTMLLint version 0.02.
+This document describes Plack::Middleware::HTMLLint version 0.03.
 
 =head1 SYNOPSIS
 

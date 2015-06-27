@@ -5,7 +5,7 @@ Plack::Middleware::HTMLLint - check syntax with HTML::Lint for PSGI application'
 
 # VERSION
 
-This document describes Plack::Middleware::HTMLLint version 0.02.
+This document describes Plack::Middleware::HTMLLint version 0.03.
 
 # SYNOPSIS
 
