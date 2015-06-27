@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/karupanerura/p5-Plack-Middleware-HTMLLint.svg?branch=master)](https://travis-ci.org/karupanerura/p5-Plack-Middleware-HTMLLint)
 # NAME
 
 Plack::Middleware::HTMLLint - check syntax with HTML::Lint for PSGI application's response HTML
@@ -40,7 +41,7 @@ to cpan-RT.
 
 # SEE ALSO
 
-[Plack::Middleware](http://search.cpan.org/perldoc?Plack::Middleware) [Plack::Middleware::HTMLLint::Pluggable](http://search.cpan.org/perldoc?Plack::Middleware::HTMLLint::Pluggable) [HTML::Lint](http://search.cpan.org/perldoc?HTML::Lint) [HTML::Lint::Pluggable](http://search.cpan.org/perldoc?HTML::Lint::Pluggable)
+[Plack::Middleware](https://metacpan.org/pod/Plack::Middleware) [Plack::Middleware::HTMLLint::Pluggable](https://metacpan.org/pod/Plack::Middleware::HTMLLint::Pluggable) [HTML::Lint](https://metacpan.org/pod/HTML::Lint) [HTML::Lint::Pluggable](https://metacpan.org/pod/HTML::Lint::Pluggable)
 
 # AUTHOR
 

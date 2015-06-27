@@ -4,7 +4,7 @@
       "Kenta Sato <karupa@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v0.0.53, CPAN::Meta::Converter version 2.130880",
+   "generated_by" : "Minilla/v2.4.1, CPAN::Meta::Converter version 2.150001",
    "license" : [
       "perl_5"
    ],
@@ -20,55 +20,45 @@
          "inc",
          "share",
          "eg",
-         "examples"
+         "examples",
+         "author",
+         "builder"
       ]
    },
    "prereqs" : {
-      "build" : {
-         "requires" : {
-            "Module::Build::Pluggable::ReadmeMarkdownFromPod" : "0.04",
-            "Module::Build::Pluggable::Repository" : "0.01",
-            "Pod::Markdown" : "0"
-         }
-      },
       "configure" : {
          "requires" : {
-            "CPAN::Meta" : "0",
-            "CPAN::Meta::Prereqs" : "0",
-            "Module::Build" : "0.38",
-            "Module::Build::Pluggable" : "0.04",
-            "Module::Build::Pluggable::ReadmeMarkdownFromPod" : "0.04",
-            "Module::Build::Pluggable::Repository" : "0.01"
+            "Module::Build::Tiny" : "0.035"
          }
       },
       "develop" : {
          "requires" : {
-            "Pod::Wordlist::hanekomu" : "0",
             "Test::CPAN::Meta" : "0",
-            "Test::MinimumVersion" : "0.10108",
+            "Test::MinimumVersion::Fast" : "0.04",
+            "Test::PAUSE::Permissions" : "0.04",
             "Test::Pod" : "1.41",
-            "Test::Spelling" : "0"
+            "Test::Spellunker" : "v0.2.7"
          }
       },
       "runtime" : {
          "requires" : {
             "HTML::Escape" : "0",
             "HTML::Lint" : "0",
+            "HTML::Lint::Pluggable" : "0",
+            "Plack::Builder" : "0",
             "Plack::Middleware" : "0",
             "Plack::Util" : "0",
             "Plack::Util::Accessor" : "0",
-            "constant" : "0",
             "parent" : "0",
-            "perl" : "5.009_004"
+            "perl" : "5.008001"
          }
       },
       "test" : {
          "requires" : {
             "HTTP::Request" : "0",
-            "Plack::Builder" : "0",
             "Plack::Test" : "0",
-            "Test::More" : "0.88",
-            "Test::Requires" : "0.06"
+            "Test::More" : "0",
+            "Test::Requires" : "0"
          }
       }
    },
@@ -84,5 +74,6 @@
          "web" : "https://github.com/karupanerura/p5-Plack-Middleware-HTMLLint"
       }
    },
-   "version" : "0.02"
+   "version" : "0.02",
+   "x_authority" : "cpan:KARUPA"
 }

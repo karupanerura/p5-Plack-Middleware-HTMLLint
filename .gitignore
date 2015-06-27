@@ -1,5 +1,4 @@
 Plack-Middleware-HTMLLint-*
-.*
 !.git*
 !.shipit
 !.dimconfig
@@ -33,3 +32,5 @@ cover_db*
 /Build
 !Build/
 !META.json
+/Build.bat
+!LICENSE
